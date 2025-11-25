@@ -1,5 +1,7 @@
+packages: []
+
 onlyBuiltDependencies:
   - esbuild
 
 patchedDependencies:
-  '@vanilla-extract/recipes': patches/@vanilla-extract__recipes.patch
+  "@vanilla-extract/recipes": patches/@vanilla-extract__recipes.patch
