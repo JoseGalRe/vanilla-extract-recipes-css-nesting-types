@@ -1,0 +1,13 @@
+diff --git a/dist/vanilla-extract-recipes.cjs.d.ts b/dist/vanilla-extract-recipes.cjs.d.ts
+index ad953573cf734a16c95efcfe5892ba8df52baf60..094a309f497e914b6909599ec1a51fb2f2d498a5 100644
+--- a/dist/vanilla-extract-recipes.cjs.d.ts
++++ b/dist/vanilla-extract-recipes.cjs.d.ts
+@@ -3,7 +3,7 @@ import { ComplexStyleRule } from '@vanilla-extract/css';
+ type Resolve<T> = {
+     [Key in keyof T]: T[Key];
+ } & {};
+-type RecipeStyleRule = ComplexStyleRule | string;
++type RecipeStyleRule = ComplexStyleRule | string | { [key: string]: RecipeStyleRule };
+ type VariantDefinitions = Record<string, RecipeStyleRule>;
+ type BooleanMap<T> = T extends 'true' | 'false' ? boolean : T;
+ type VariantGroups = Record<string, VariantDefinitions>;
